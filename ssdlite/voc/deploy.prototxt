@@ -56,6 +56,12 @@ layer {
   }
 }
 layer {
+  name: "Conv/relu"
+  type: "ReLU"
+  bottom: "Conv"
+  top: "Conv"
+}
+layer {
   name: "conv/depthwise"
   type: "Convolution"
   bottom: "Conv"
@@ -82,6 +88,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "conv/depthwise/relu"
+  type: "ReLU"
+  bottom: "conv/depthwise"
+  top: "conv/depthwise"
 }
 layer {
   name: "conv/project"
@@ -132,6 +144,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "conv_1/expand/relu"
+  type: "ReLU"
+  bottom: "conv_1/expand"
+  top: "conv_1/expand"
 }
 layer {
   name: "conv_1/depthwise"
@@ -185,6 +203,12 @@ layer {
   }
 }
 layer {
+  name: "conv_1/depthwise/relu"
+  type: "ReLU"
+  bottom: "conv_1/depthwise"
+  top: "conv_1/depthwise"
+}
+layer {
   name: "conv_1/project"
   type: "Convolution"
   bottom: "conv_1/depthwise"
@@ -235,6 +259,12 @@ layer {
   }
 }
 layer {
+  name: "conv_2/expand/relu"
+  type: "ReLU"
+  bottom: "conv_2/expand"
+  top: "conv_2/expand"
+}
+layer {
   name: "conv_2/depthwise"
   type: "Convolution"
   bottom: "conv_2/expand"
@@ -261,6 +291,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "conv_2/depthwise/relu"
+  type: "ReLU"
+  bottom: "conv_2/depthwise"
+  top: "conv_2/depthwise"
 }
 layer {
   name: "conv_2/project"
@@ -320,6 +356,12 @@ layer {
   }
 }
 layer {
+  name: "conv_3/expand/relu"
+  type: "ReLU"
+  bottom: "conv_3/expand"
+  top: "conv_3/expand"
+}
+layer {
   name: "conv_3/depthwise"
   type: "Convolution"
   bottom: "conv_3/expand"
@@ -347,6 +389,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "conv_3/depthwise/relu"
+  type: "ReLU"
+  bottom: "conv_3/depthwise"
+  top: "conv_3/depthwise"
 }
 layer {
   name: "conv_3/project"
@@ -399,6 +447,12 @@ layer {
   }
 }
 layer {
+  name: "conv_4/expand/relu"
+  type: "ReLU"
+  bottom: "conv_4/expand"
+  top: "conv_4/expand"
+}
+layer {
   name: "conv_4/depthwise"
   type: "Convolution"
   bottom: "conv_4/expand"
@@ -425,6 +479,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "conv_4/depthwise/relu"
+  type: "ReLU"
+  bottom: "conv_4/depthwise"
+  top: "conv_4/depthwise"
 }
 layer {
   name: "conv_4/project"
@@ -484,6 +544,12 @@ layer {
   }
 }
 layer {
+  name: "conv_5/expand/relu"
+  type: "ReLU"
+  bottom: "conv_5/expand"
+  top: "conv_5/expand"
+}
+layer {
   name: "conv_5/depthwise"
   type: "Convolution"
   bottom: "conv_5/expand"
@@ -510,6 +576,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "conv_5/depthwise/relu"
+  type: "ReLU"
+  bottom: "conv_5/depthwise"
+  top: "conv_5/depthwise"
 }
 layer {
   name: "conv_5/project"
@@ -569,6 +641,12 @@ layer {
   }
 }
 layer {
+  name: "conv_6/expand/relu"
+  type: "ReLU"
+  bottom: "conv_6/expand"
+  top: "conv_6/expand"
+}
+layer {
   name: "conv_6/depthwise"
   type: "Convolution"
   bottom: "conv_6/expand"
@@ -618,6 +696,12 @@ layer {
     axis: 3
     slice_point: 1
   }
+}
+layer {
+  name: "conv_6/depthwise/relu"
+  type: "ReLU"
+  bottom: "conv_6/depthwise"
+  top: "conv_6/depthwise"
 }
 layer {
   name: "conv_6/project"
@@ -670,6 +754,12 @@ layer {
   }
 }
 layer {
+  name: "conv_7/expand/relu"
+  type: "ReLU"
+  bottom: "conv_7/expand"
+  top: "conv_7/expand"
+}
+layer {
   name: "conv_7/depthwise"
   type: "Convolution"
   bottom: "conv_7/expand"
@@ -696,6 +786,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "conv_7/depthwise/relu"
+  type: "ReLU"
+  bottom: "conv_7/depthwise"
+  top: "conv_7/depthwise"
 }
 layer {
   name: "conv_7/project"
@@ -755,6 +851,12 @@ layer {
   }
 }
 layer {
+  name: "conv_8/expand/relu"
+  type: "ReLU"
+  bottom: "conv_8/expand"
+  top: "conv_8/expand"
+}
+layer {
   name: "conv_8/depthwise"
   type: "Convolution"
   bottom: "conv_8/expand"
@@ -781,6 +883,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "conv_8/depthwise/relu"
+  type: "ReLU"
+  bottom: "conv_8/depthwise"
+  top: "conv_8/depthwise"
 }
 layer {
   name: "conv_8/project"
@@ -840,6 +948,12 @@ layer {
   }
 }
 layer {
+  name: "conv_9/expand/relu"
+  type: "ReLU"
+  bottom: "conv_9/expand"
+  top: "conv_9/expand"
+}
+layer {
   name: "conv_9/depthwise"
   type: "Convolution"
   bottom: "conv_9/expand"
@@ -866,6 +980,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "conv_9/depthwise/relu"
+  type: "ReLU"
+  bottom: "conv_9/depthwise"
+  top: "conv_9/depthwise"
 }
 layer {
   name: "conv_9/project"
@@ -925,6 +1045,12 @@ layer {
   }
 }
 layer {
+  name: "conv_10/expand/relu"
+  type: "ReLU"
+  bottom: "conv_10/expand"
+  top: "conv_10/expand"
+}
+layer {
   name: "conv_10/depthwise"
   type: "Convolution"
   bottom: "conv_10/expand"
@@ -951,6 +1077,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "conv_10/depthwise/relu"
+  type: "ReLU"
+  bottom: "conv_10/depthwise"
+  top: "conv_10/depthwise"
 }
 layer {
   name: "conv_10/project"
@@ -1003,6 +1135,12 @@ layer {
   }
 }
 layer {
+  name: "conv_11/expand/relu"
+  type: "ReLU"
+  bottom: "conv_11/expand"
+  top: "conv_11/expand"
+}
+layer {
   name: "conv_11/depthwise"
   type: "Convolution"
   bottom: "conv_11/expand"
@@ -1029,6 +1167,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "conv_11/depthwise/relu"
+  type: "ReLU"
+  bottom: "conv_11/depthwise"
+  top: "conv_11/depthwise"
 }
 layer {
   name: "conv_11/project"
@@ -1088,6 +1232,12 @@ layer {
   }
 }
 layer {
+  name: "conv_12/expand/relu"
+  type: "ReLU"
+  bottom: "conv_12/expand"
+  top: "conv_12/expand"
+}
+layer {
   name: "conv_12/depthwise"
   type: "Convolution"
   bottom: "conv_12/expand"
@@ -1114,6 +1264,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "conv_12/depthwise/relu"
+  type: "ReLU"
+  bottom: "conv_12/depthwise"
+  top: "conv_12/depthwise"
 }
 layer {
   name: "conv_12/project"
@@ -1173,6 +1329,12 @@ layer {
   }
 }
 layer {
+  name: "conv_13/expand/relu"
+  type: "ReLU"
+  bottom: "conv_13/expand"
+  top: "conv_13/expand"
+}
+layer {
   name: "conv_13/depthwise"
   type: "Convolution"
   bottom: "conv_13/expand"
@@ -1200,6 +1362,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "conv_13/depthwise/relu"
+  type: "ReLU"
+  bottom: "conv_13/depthwise"
+  top: "conv_13/depthwise"
 }
 layer {
   name: "conv_13/project"
@@ -1252,6 +1420,12 @@ layer {
   }
 }
 layer {
+  name: "conv_14/expand/relu"
+  type: "ReLU"
+  bottom: "conv_14/expand"
+  top: "conv_14/expand"
+}
+layer {
   name: "conv_14/depthwise"
   type: "Convolution"
   bottom: "conv_14/expand"
@@ -1278,6 +1452,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "conv_14/depthwise/relu"
+  type: "ReLU"
+  bottom: "conv_14/depthwise"
+  top: "conv_14/depthwise"
 }
 layer {
   name: "conv_14/project"
@@ -1337,6 +1517,12 @@ layer {
   }
 }
 layer {
+  name: "conv_15/expand/relu"
+  type: "ReLU"
+  bottom: "conv_15/expand"
+  top: "conv_15/expand"
+}
+layer {
   name: "conv_15/depthwise"
   type: "Convolution"
   bottom: "conv_15/expand"
@@ -1363,6 +1549,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "conv_15/depthwise/relu"
+  type: "ReLU"
+  bottom: "conv_15/depthwise"
+  top: "conv_15/depthwise"
 }
 layer {
   name: "conv_15/project"
@@ -1422,6 +1614,12 @@ layer {
   }
 }
 layer {
+  name: "conv_16/expand/relu"
+  type: "ReLU"
+  bottom: "conv_16/expand"
+  top: "conv_16/expand"
+}
+layer {
   name: "conv_16/depthwise"
   type: "Convolution"
   bottom: "conv_16/expand"
@@ -1448,6 +1646,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "conv_16/depthwise/relu"
+  type: "ReLU"
+  bottom: "conv_16/depthwise"
+  top: "conv_16/depthwise"
 }
 layer {
   name: "conv_16/project"
@@ -1500,6 +1704,12 @@ layer {
   }
 }
 layer {
+  name: "Conv_1/relu"
+  type: "ReLU"
+  bottom: "Conv_1"
+  top: "Conv_1"
+}
+layer {
   name: "layer_19_1_2"
   type: "Convolution"
   bottom: "Conv_1"
@@ -1523,6 +1733,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "layer_19_1_2/relu"
+  type: "ReLU"
+  bottom: "layer_19_1_2"
+  top: "layer_19_1_2"
 }
 layer {
   name: "layer_19_2_2/depthwise"
@@ -1576,6 +1792,12 @@ layer {
   }
 }
 layer {
+  name: "layer_19_2_2/depthwise/relu"
+  type: "ReLU"
+  bottom: "layer_19_2_2/depthwise"
+  top: "layer_19_2_2/depthwise"
+}
+layer {
   name: "layer_19_2_2"
   type: "Convolution"
   bottom: "layer_19_2_2/depthwise"
@@ -1601,6 +1823,12 @@ layer {
   }
 }
 layer {
+  name: "layer_19_2_2/relu"
+  type: "ReLU"
+  bottom: "layer_19_2_2"
+  top: "layer_19_2_2"
+}
+layer {
   name: "layer_19_1_3"
   type: "Convolution"
   bottom: "layer_19_2_2"
@@ -1624,6 +1852,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "layer_19_1_3/relu"
+  type: "ReLU"
+  bottom: "layer_19_1_3"
+  top: "layer_19_1_3"
 }
 layer {
   name: "layer_19_2_3/depthwise"
@@ -1655,6 +1889,12 @@ layer {
   }
 }
 layer {
+  name: "layer_19_2_3/depthwise/relu"
+  type: "ReLU"
+  bottom: "layer_19_2_3/depthwise"
+  top: "layer_19_2_3/depthwise"
+}
+layer {
   name: "layer_19_2_3"
   type: "Convolution"
   bottom: "layer_19_2_3/depthwise"
@@ -1680,6 +1920,12 @@ layer {
   }
 }
 layer {
+  name: "layer_19_2_3/relu"
+  type: "ReLU"
+  bottom: "layer_19_2_3"
+  top: "layer_19_2_3"
+}
+layer {
   name: "layer_19_1_4"
   type: "Convolution"
   bottom: "layer_19_2_3"
@@ -1703,6 +1949,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "layer_19_1_4/relu"
+  type: "ReLU"
+  bottom: "layer_19_1_4"
+  top: "layer_19_1_4"
 }
 layer {
   name: "layer_19_2_4/depthwise"
@@ -1734,6 +1986,12 @@ layer {
   }
 }
 layer {
+  name: "layer_19_2_4/depthwise/relu"
+  type: "ReLU"
+  bottom: "layer_19_2_4/depthwise"
+  top: "layer_19_2_4/depthwise"
+}
+layer {
   name: "layer_19_2_4"
   type: "Convolution"
   bottom: "layer_19_2_4/depthwise"
@@ -1759,6 +2017,12 @@ layer {
   }
 }
 layer {
+  name: "layer_19_2_4/relu"
+  type: "ReLU"
+  bottom: "layer_19_2_4"
+  top: "layer_19_2_4"
+}
+layer {
   name: "layer_19_1_5"
   type: "Convolution"
   bottom: "layer_19_2_4"
@@ -1782,6 +2046,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "layer_19_1_5/relu"
+  type: "ReLU"
+  bottom: "layer_19_1_5"
+  top: "layer_19_1_5"
 }
 layer {
   name: "layer_19_2_5/depthwise"
@@ -1835,6 +2105,12 @@ layer {
   }
 }
 layer {
+  name: "layer_19_2_5/depthwise/relu"
+  type: "ReLU"
+  bottom: "layer_19_2_5/depthwise"
+  top: "layer_19_2_5/depthwise"
+}
+layer {
   name: "layer_19_2_5"
   type: "Convolution"
   bottom: "layer_19_2_5/depthwise"
@@ -1858,6 +2134,12 @@ layer {
       value: 0.0
     }
   }
+}
+layer {
+  name: "layer_19_2_5/relu"
+  type: "ReLU"
+  bottom: "layer_19_2_5"
+  top: "layer_19_2_5"
 }
 layer {
   name: "silence"
@@ -1938,6 +2220,12 @@ layer {
       value: 0
     }
   }
+}
+layer {
+  name: "conv_13/expand_mbox_loc/depthwise/relu"
+  type: "ReLU"
+  bottom: "conv_13/expand_mbox_loc/depthwise"
+  top: "conv_13/expand_mbox_loc/depthwise"
 }
 layer {
   name: "conv_13/expand_mbox_loc"
@@ -2049,6 +2337,12 @@ layer {
       value: 0
     }
   }
+}
+layer {
+  name: "conv_13/expand_mbox_conf/depthwise/relu"
+  type: "ReLU"
+  bottom: "conv_13/expand_mbox_conf/depthwise"
+  top: "conv_13/expand_mbox_conf/depthwise"
 }
 layer {
   name: "conv_13/expand_mbox_conf"
@@ -2180,6 +2474,12 @@ layer {
   }
 }
 layer {
+  name: "Conv_1_mbox_loc/depthwise/relu"
+  type: "ReLU"
+  bottom: "Conv_1_mbox_loc/depthwise"
+  top: "Conv_1_mbox_loc/depthwise"
+}
+layer {
   name: "Conv_1_mbox_loc"
   type: "Convolution"
   bottom: "Conv_1_mbox_loc/depthwise"
@@ -2289,6 +2589,12 @@ layer {
       value: 0
     }
   }
+}
+layer {
+  name: "Conv_1_mbox_conf/depthwise/relu"
+  type: "ReLU"
+  bottom: "Conv_1_mbox_conf/depthwise"
+  top: "Conv_1_mbox_conf/depthwise"
 }
 layer {
   name: "Conv_1_mbox_conf"
@@ -2422,6 +2728,12 @@ layer {
   }
 }
 layer {
+  name: "layer_19_2_2_mbox_loc/depthwise/relu"
+  type: "ReLU"
+  bottom: "layer_19_2_2_mbox_loc/depthwise"
+  top: "layer_19_2_2_mbox_loc/depthwise"
+}
+layer {
   name: "layer_19_2_2_mbox_loc"
   type: "Convolution"
   bottom: "layer_19_2_2_mbox_loc/depthwise"
@@ -2531,6 +2843,12 @@ layer {
       value: 0
     }
   }
+}
+layer {
+  name: "layer_19_2_2_mbox_conf/depthwise/relu"
+  type: "ReLU"
+  bottom: "layer_19_2_2_mbox_conf/depthwise"
+  top: "layer_19_2_2_mbox_conf/depthwise"
 }
 layer {
   name: "layer_19_2_2_mbox_conf"
@@ -2664,6 +2982,12 @@ layer {
   }
 }
 layer {
+  name: "layer_19_2_3_mbox_loc/depthwise/relu"
+  type: "ReLU"
+  bottom: "layer_19_2_3_mbox_loc/depthwise"
+  top: "layer_19_2_3_mbox_loc/depthwise"
+}
+layer {
   name: "layer_19_2_3_mbox_loc"
   type: "Convolution"
   bottom: "layer_19_2_3_mbox_loc/depthwise"
@@ -2773,6 +3097,12 @@ layer {
       value: 0
     }
   }
+}
+layer {
+  name: "layer_19_2_3_mbox_conf/depthwise/relu"
+  type: "ReLU"
+  bottom: "layer_19_2_3_mbox_conf/depthwise"
+  top: "layer_19_2_3_mbox_conf/depthwise"
 }
 layer {
   name: "layer_19_2_3_mbox_conf"
@@ -2906,6 +3236,12 @@ layer {
   }
 }
 layer {
+  name: "layer_19_2_4_mbox_loc/depthwise/relu"
+  type: "ReLU"
+  bottom: "layer_19_2_4_mbox_loc/depthwise"
+  top: "layer_19_2_4_mbox_loc/depthwise"
+}
+layer {
   name: "layer_19_2_4_mbox_loc"
   type: "Convolution"
   bottom: "layer_19_2_4_mbox_loc/depthwise"
@@ -3015,6 +3351,12 @@ layer {
       value: 0
     }
   }
+}
+layer {
+  name: "layer_19_2_4_mbox_conf/depthwise/relu"
+  type: "ReLU"
+  bottom: "layer_19_2_4_mbox_conf/depthwise"
+  top: "layer_19_2_4_mbox_conf/depthwise"
 }
 layer {
   name: "layer_19_2_4_mbox_conf"
@@ -3148,6 +3490,12 @@ layer {
   }
 }
 layer {
+  name: "layer_19_2_5_mbox_loc/depthwise/relu"
+  type: "ReLU"
+  bottom: "layer_19_2_5_mbox_loc/depthwise"
+  top: "layer_19_2_5_mbox_loc/depthwise"
+}
+layer {
   name: "layer_19_2_5_mbox_loc"
   type: "Convolution"
   bottom: "layer_19_2_5_mbox_loc/depthwise"
@@ -3257,6 +3605,12 @@ layer {
       value: 0
     }
   }
+}
+layer {
+  name: "layer_19_2_5_mbox_conf/depthwise/relu"
+  type: "ReLU"
+  bottom: "layer_19_2_5_mbox_conf/depthwise"
+  top: "layer_19_2_5_mbox_conf/depthwise"
 }
 layer {
   name: "layer_19_2_5_mbox_conf"

@@ -16,7 +16,7 @@ def load_net(net, net2):
             if key.endswith('mbox_conf'):
                 for i in range(len(net.params[key])):
                     wt = net.params[key][i].data
-                    x = wt.shape[0] / 91
+                    x = int(wt.shape[0] / 91)
                     wt = wt.reshape(x, 91, -1)
                     neww = np.ones((x, 21, wt.shape[2]))
                     print(neww.shape)

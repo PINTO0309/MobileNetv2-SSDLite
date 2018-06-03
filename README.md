@@ -86,8 +86,8 @@ $ python3 load_caffe_weights.py
 ```
 
 Learning data of the coco model is generated.<br>
-1. deploy.caffemodel
-2. deploy.prototxt
+1. ssdlite/deploy.caffemodel
+2. ssdlite/deploy.prototxt
 
 
 To generate learning data of the voc model, execute the following.
@@ -124,8 +124,8 @@ $ python3 coco2voc.py
 ```
 
 Learning data of the coco model is generated.
-1. deploy_voc.caffemodel
-2. voc/deploy.prototxt
+1. ssdlite/deploy_voc.caffemodel
+2. ssdlite/voc/deploy.prototxt
 
 <hr>
 <hr>

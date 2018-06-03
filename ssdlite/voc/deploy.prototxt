@@ -56,12 +56,6 @@ layer {
   }
 }
 layer {
-  name: "Conv/relu"
-  type: "ReLU6"
-  bottom: "Conv"
-  top: "Conv"
-}
-layer {
   name: "conv/depthwise"
   type: "Convolution"
   bottom: "Conv"

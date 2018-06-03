@@ -2,7 +2,7 @@ import numpy as np
 import sys,os  
 from scipy import misc
 import cv2
-caffe_root = '/home/yaochuanqi/work/tmp/ssd/'
+caffe_root = '/opt/movidius/ssd-caffe/'
 sys.path.insert(0, caffe_root + 'python')  
 import caffe  
 

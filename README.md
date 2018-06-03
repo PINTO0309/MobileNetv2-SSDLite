@@ -1,8 +1,136 @@
 # MobileNetv2-SSDLite
-Caffe implementation of SSD detection on MobileNetv2, converted from tensorflow.
+Caffe implementation of SSD detection on MobileNetv2, converted from tensorflow.<br>
+**Be careful as it will not work with Intel Movidius Neural Compute Stick (NCS).**
 
 ### Prerequisites
 Tensorflow and Caffe version [SSD](https://github.com/weiliu89/caffe) is properly installed on your computer.
+
+### Procedure
+
+pip command and installation of Tensorflow.
+
+```
+$ cd ~
+$ sudo apt-get install python-pip python-dev python-launchpadlib   # for Python 2.7
+$ sudo apt-get install python3-pip python3-dev python3-launchpadlib # for Python 3.n
+$ wget https://bootstrap.pypa.io/get-pip.py
+$ sudo python3 get-pip.py
+$ sudo python2 get-pip.py
+$ sudo reboot
+$ sudo -H pip install --upgrade tensorflow # Python 2.7; CPU support (no GPU support) Ver 1.8.0 [2018.06.03]
+$ sudo -H pip3 install --upgrade tensorflow # Python 3.n; CPU support (no GPU support) Ver 1.8.0 [2018.06.03]
+```
+
+【Reference】Uninstall Tensorflow
+
+```
+$ sudo pip uninstall tensorflow  # for Python 2.7
+$ sudo pip3 uninstall tensorflow # for Python 3.n
+```
+
+MobileNetv2-SSDLite Clone of learning data generation tool.
+
+```
+$ cd ~
+$ git clone https://github.com/PINTO0309/MobileNetv2-SSDLite.git
+$ cd ~/MobileNetv2-SSDLite/ssdlite
+$ wget http://download.tensorflow.org/models/object_detection/ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz
+$ tar -zxvf ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz
+$ rm ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz
+```
+
+Execute the following command.
+
+```
+$ cd ~/MobileNetv2-SSDLite/ssdlite
+$ python dump_tensorflow_weights.py
+```
+
+【Reference】Confirm caffe installation path
+
+```
+$ sudo find / -name caffe
+```
+
+Execute the following command.
+
+```
+$ cd ~/MobileNetv2-SSDLite/ssdlite
+$ cp load_caffe_weights.py BK_load_caffe_weights.py
+$ nano load_caffe_weights.py
+```
+
+```
+#Before editing Load_caffe_weights.py
+
+caffe_root = '/home/yaochuanqi/work/ssd/caffe/'
+for key in net.params.iterkeys():
+print key
+```
+
+```
+#After editing load_caffe_weights.py
+
+caffe_root = '/path/to/your/ssd-caffe/'
+[ex] caffe_root = '/opt/movidius/ssd-caffe/'
+
+for key in net.params.keys():
+print(key)
+```
+
+Execute the following command.
+
+```
+$ cd ~/MobileNetv2-SSDLite/ssdlite
+$ python3 load_caffe_weights.py
+```
+
+Learning data of the coco model is generated.<br>
+1. deploy.caffemodel
+2. deploy.prototxt
+
+
+To generate learning data of the voc model, execute the following.
+
+```
+$ cd ~/MobileNetv2-SSDLite/ssdlite
+$ cp coco2voc.py BK_coco2voc.py
+$ nano coco2voc.py
+```
+
+```
+#Before editing coco2voc.py
+
+caffe_root = '/home/yaochuanqi/work/ssd/caffe/'
+for key in net.params.keys():
+x = wt.shape[0] / 91
+```
+
+```
+#After editing coco2voc.py
+
+caffe_root = '/path/to/your/ssd-caffe/'
+[ex] caffe_root = '/opt/movidius/ssd-caffe/'
+
+for key in net.params.keys():
+x = int(wt.shape[0] / 91)
+```
+
+Execute the following command.
+
+```shell
+$ cd ~/MobileNetv2-SSDLite/ssdlite
+$ python3 coco2voc.py
+```
+
+Learning data of the coco model is generated.
+1. deploy_voc.caffemodel
+2. voc/deploy.prototxt
+
+<hr>
+<hr>
+<hr>
+<hr>
 
 ### Usage
 0. Firstly you should download the original model from [tensorflow](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md).

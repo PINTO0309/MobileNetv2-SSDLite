@@ -102,7 +102,7 @@ $ nano coco2voc.py
 #Before editing coco2voc.py
 
 caffe_root = '/home/yaochuanqi/work/ssd/caffe/'
-for key in net.params.keys():
+for key in net.params.iterkeys():
 x = wt.shape[0] / 91
 ```
 

@@ -123,7 +123,7 @@ $ cd ~/MobileNetv2-SSDLite/ssdlite
 $ python3 coco2voc.py
 ```
 
-Learning data of the coco model is generated.
+Learning data of the voc model is generated.
 1. ssdlite/deploy_voc.caffemodel
 2. ssdlite/voc/deploy.prototxt
 

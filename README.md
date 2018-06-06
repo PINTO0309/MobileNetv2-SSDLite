@@ -7,6 +7,11 @@ https://github.com/chuanqi305/MobileNetv2-SSDLite.git<br>
 I have not confirmed the behavior of the generated model at all.<br>
 Pull Request is welcomed.<br>
 
+### Environment
+Ubuntu 16.04<br>
+Python 2.7.12<br>
+Python 3.5.2<br>
+
 ### Prerequisites
 Tensorflow and Caffe version [SSD](https://github.com/weiliu89/caffe) is properly installed on your computer.
 

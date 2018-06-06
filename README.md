@@ -2,6 +2,11 @@
 Caffe implementation of SSD detection on MobileNetv2, converted from tensorflow.<br>
 **【As of June 3, 2018】 Be careful as it will not work with Intel Movidius Neural Compute Stick (NCS).**
 
+I fixed a little clone of Chuanqi305/MobileNetv2-SSDLite.<br>
+https://github.com/chuanqi305/MobileNetv2-SSDLite.git<br>
+I have not confirmed the behavior of the generated model at all.<br>
+Pull Request is welcomed.<br>
+
 ### Prerequisites
 Tensorflow and Caffe version [SSD](https://github.com/weiliu89/caffe) is properly installed on your computer.
 

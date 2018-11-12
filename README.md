@@ -13,7 +13,8 @@ Python 2.7.12<br>
 Python 3.5.2<br>
 
 ### Prerequisites
-Tensorflow and Caffe version [SSD](https://github.com/weiliu89/caffe) is properly installed on your computer.
+Tensorflow and Caffe version **[SSD](https://github.com/weiliu89/caffe) is properly installed on your computer.**  
+There is a ReLU6 layer implementation in chuanqi305's fork of **[SSD](https://github.com/chuanqi305/ssd).**
 
 ### Procedure
 
